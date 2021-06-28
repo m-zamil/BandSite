@@ -53,18 +53,29 @@ html {
 
 .hero {
   display: flex;
+  width: 100%;
+  max-width: 1280px;
+  height: 600px;
+  background-position: center center;
   font-family: "AvernirNextLTPro";
   background-image: url(../assets/images/hero-bio.jpg);
+  background-size: cover;
 }
-.hero __title {
+.hero__title {
+  flex-direction: column;
+  align-items: center;
   font-size: 3.75rem;
   line-height: 4.25rem;
   font-weight: 700;
+  padding-left: 2.25rem;
+  color: #ffffff;
 }
 
 .bio {
   display: flex;
   flex-flow: column;
+  padding-left: 2.25rem;
+  padding-right: 2.25rem;
 }
 
 .text--header {
@@ -73,6 +84,7 @@ html {
   font-weight: 700;
   padding-top: 3rem;
   padding-bottom: 2.25rem;
+  padding-left: 2.25rem;
 }
 .text--quote {
   padding-bottom: 2.25rem;
@@ -97,17 +109,24 @@ html {
 
 .gallery {
   display: flex;
-  flex-flow: column;
 }
 .gallery__header {
+  display: flex;
   font-size: 2.25rem;
   line-height: 2.75rem;
   font-weight: 700;
+  max-width: 1280px;
   padding-bottom: 2.25rem;
 }
 .gallery__img {
+  display: flex;
+  justify-content: center;
   padding-bottom: 2.25rem;
   flex-wrap: wrap;
+  flex-flow: row;
+  padding-left: 2.25rem;
+  padding-right: 2.25rem;
+  max-width: 300px;
 }
 
 .footer {
