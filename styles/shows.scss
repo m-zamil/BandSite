@@ -1,0 +1,117 @@
+@use "../styles/_partials/partials" as *;
+
+html {
+    font-family: "AvernirNextLTPro";
+    color: bandSiteBlack;
+
+    //Menu//
+    
+    .menu {
+        font-family: "AvernirNextLTPro";
+        display: flex;
+        background-color: $bandSiteBlack;
+        color: #ffffff;
+        list-style: none;
+        justify-content: flex-start;
+        margin: 0 auto;
+        padding: $desktopPadding;
+        padding-top: 3rem;
+    &__logo {
+        max-height: 1.25rem;
+        max-width: 7.5rem;
+        margin-right: auto;
+        @include tablet {
+            color: $bandSiteDarkBlack;
+        }
+    }
+    &__title{
+        text-decoration: none;
+        color: $white;
+        margin-right: auto;
+
+    
+    &--active {
+        text-decoration: none;
+        color: $white;
+        border-bottom: 1px solid $white;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    }
+    }
+
+//Hero//
+
+    .hero {
+        display: flex;
+        max-width: 1280px;
+        height: 600px;
+        background-position: center center;
+        font-family:'AvernirNextLTPro';
+        background-image: url(../assets/images/hero-shows.jpg);
+        background-size:cover;
+
+    &__title {
+    flex-direction: column;
+    align-items: center;
+    @include pageHeader;
+    padding: $desktopPadding;
+    color: $white;
+    }
+    &__subTitle {
+        flex-direction: column;
+        align-items: center;
+        @include sectionHeader;
+        padding: $desktopPadding;
+        color: $white;
+        }
+    }
+
+// Shows//
+
+.shows{
+    display:flex;
+    &__section{
+        @include bodyCopy;
+        color: $silver;
+    }
+    &__button{
+        @include ctaButton;
+    }
+}
+
+//Footer//
+
+.footer {
+    display: flex;
+    background-color: $bandSiteBlack;
+    color: #ffffff;
+
+&__title {
+    @include sectionHeader;
+    padding: $desktopPadding;
+    padding-top: $desktopHeaderPadding;
+}
+&__name {
+    @include footerCopy;
+    font-weight: bold;
+    padding: $desktopPadding;
+}
+&__text {
+    @include footerCopy;
+    padding: $desktopPadding;
+}
+}
+
+.media {
+
+
+&__img {
+
+}
+&__logo {
+    padding: $desktopPadding;
+}
+}
+}

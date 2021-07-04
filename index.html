@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aquil Johnston Band Site</title>
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/bio.css">
 </head>
 <body>
    
@@ -20,7 +20,7 @@
 <!-- Hero -->
 
 <nav class="hero">
-    <p class="hero__title">The Bees Knees</p>
+    <h1 class="hero__title">The Bees Knees</h1>
 </nav>
 
 <!-- Bio -->
@@ -39,9 +39,10 @@
 </section>
 
 <!-- Gallery -->
-<section class="gallery">
-    <h3 class="gallery__header">Photo Gallery</h3>
+<div class="images_wrapper">
+    <h2 class="information">Photo Gallery</h2>
     <div>
+        <section class="gallery">
     <Img class="gallery__img" src="./assets/images/Photo-gallery-1.jpg"></Img>
 
     <Img class="gallery__img" src="./assets/images/Photo-gallery-2.jpg"></Img>
@@ -60,50 +61,53 @@
 
     <Img class="gallery__img" src="./assets/images/Photo-gallery-9.jpg"></Img>
     </div>
-</section>
+</div>
 
 <!-- Social -->
+<div>
+    <h2 class="social__header">Join the Conversation</h2>
+    <form class="social__form">
+        AVITAR
+<p class="social__form--section">NAME</p>
+<input class="social__form--input">Enter your name</input>
 
-<!-- #### Join the Conversation
+<p class="social__form--section">COMMENT</p>
+<input class="social__form--input">Add a new comment</input>
 
+<button class="social__button">COMMENT</button>
+</form>
 
-##### Name
+<hr class="social__divider"></hr>
 
-_Enter your name_
-
-
-##### Comment
-
-_Add a new comment_
-
-
-##### Connor Walton
-
-02/17/2021
+<section class="social__comments">
+    AVITAR
+    <p class="social__comments--name">Connor Walton</p>
+    <p class="social__comments--date">02/17/2021</p>
 
 This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.
 
+<hr class="social__divider"></hr>
 
-##### Emilie Beach
+AVITAR
+<p class="social__comments--name">Emilie Beach</p>
+<p class="social__comments--date">01/09/2021</p>
+<p class="social__comments--text">I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.</p>
 
-01/09/2021
+<hr class="social__divider"></hr>
 
-I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.
-
-
-##### Miles Acosta
-
-12/20/2020
-
-I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough. -->
-
+AVITAR
+<p class="social__comments--name">Miles Acosta</p>
+<p class="social__comments--date">12/20/2020</p>
+<p class="social__comments--text"></p>I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.</p>
+</section>
+</div>
 <!-- Footer -->
 <section class="footer">
     <h2 class="footer__title"> Get In Touch</h2>
-    <div class="social">
-        <img class="social__img" src="assets/icons/SVG/Icon-instagram.svg"></img>
-        <img class="social__img" src="assets/icons/SVG/Icon-facebook.svg"></img>
-        <img class="social__img" src="assets/icons/SVG/Icon-twitter.svg"></img>
+    <div class="media">
+        <img class="media__img" src="assets/icons/SVG/Icon-instagram.svg"></img>
+        <img class="media__img" src="assets/icons/SVG/Icon-facebook.svg"></img>
+        <img class="media__img" src="assets/icons/SVG/Icon-twitter.svg"></img>
 
     </div>
     <img class="footer__logo" src="./assets/logos/Logo-bandsite.svg">

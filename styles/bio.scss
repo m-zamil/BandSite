@@ -1,0 +1,227 @@
+@use "./_partials/partials" as *;
+
+
+html {
+    font-family: "AvernirNextLTPro";
+    color: bandSiteBlack;
+
+
+//Menu//
+    
+    .menu {
+        font-family: "AvernirNextLTPro";
+        display: flex;
+        background-color: $bandSiteBlack;
+        color: #ffffff;
+        list-style: none;
+        justify-content: flex-start;
+        margin: 0 auto;
+        padding: $desktopPadding;
+        padding-top: 3rem;
+    &__logo {
+        max-height: 1.25rem;
+        max-width: 7.5rem;
+        margin-right: auto;
+        @include tablet {
+            color: $bandSiteDarkBlack;
+        }
+    }
+    &__title{
+        text-decoration: none;
+        color: $white;
+        margin-right: auto;
+
+    
+    &--active {
+        text-decoration: none;
+        color: $white;
+        border-bottom: 1px solid $white;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    }
+    }
+
+//Hero//
+
+    .hero {
+        display: flex;
+        max-width: 1280px;
+        height: 600px;
+        background-position: center center;
+        font-family:'AvernirNextLTPro';
+        background-image: url(../assets/images/hero-bio.jpg);
+        background-size:cover;
+
+    &__title {
+    flex-direction: column;
+    align-items: center;
+    @include pageHeader;
+    padding: $desktopPadding;
+    color: $white;
+    }
+    }
+
+//Bio//
+
+    .bio {
+        display: flex;
+        flex-flow: column;
+        padding: $desktopPadding;
+
+    }
+    .photo {
+
+    }
+    .text {
+
+    &--header {
+        @include sectionHeader;
+        padding: $desktopPadding;
+        padding-top: $desktopHeaderPadding;
+
+    }
+    &--quote {
+        @include bodyCopy;
+        padding: $desktopPadding;
+    }
+    &--quote2 {
+        @include bodyCopy;
+        padding: $desktopPadding;
+    }
+    &--sub-title {
+        @include subHeader;
+        padding: $desktopPadding;
+        padding-top: $desktopHeaderPadding;
+    
+    }
+    &--about {
+        @include bodyCopy;
+        display: inline-flex;
+        padding: $desktopPadding;
+
+    }
+    }
+
+//Gallery//
+
+    .images-wrapper{
+        background-color:$bandSiteDarkBlack;
+        .gallery {
+        &header{
+
+        }
+        &img {
+
+        }
+        }
+    }
+
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        padding: $desktopPadding;
+    .information {
+        display: flex;
+        @include sectionHeader;
+        max-width: 1280px;
+        padding: $desktopPadding;
+        padding-top: $desktopHeaderPadding;
+    }
+    @include tablet {
+        flex-direction: row;
+    }
+    // @include $mobile {
+        
+    // }
+    // &__img {
+    //     margin-right: 2.25rem;
+    //     @include tablet {
+    //         width 33%;
+    //     }
+    //     padding-bottom: 2.25rem;
+    //     padding-left: 2.25rem;
+    //     padding-right: 2.25rem;
+    //     width: 300px;
+    // }
+    }
+    
+//Social//
+
+    .social{
+        display: flex;
+        &__header {
+            @include sectionHeader;
+        }
+        &__divider {
+            stroke-width: .0625rem;
+            fill: $mercury;
+        }
+        &__form {
+            padding: $desktopPadding;
+            color: $silver;
+            &--section {
+                @include bodyCopy;
+                color: $silver;
+            }
+            &--input {
+                @include bodyCopy;
+            }
+        }
+        &__button {
+                    @include ctaButton;
+        }
+        &__button:hover {
+            @include ctaButton;
+        }
+        &__comments {
+            color: $bandSiteBlack;
+            &--name {
+                font-weight: bold;
+            }
+            &--date {
+                color: $silver
+            }
+            &--text {
+
+            }
+        }
+    }
+
+//Footer//
+
+    .footer {
+        display: flex;
+        background-color: $bandSiteBlack;
+        color: #ffffff;
+
+    &__title {
+        @include sectionHeader;
+        padding: $desktopPadding;
+        padding-top: $desktopHeaderPadding;
+    }
+    &__name {
+        @include footerCopy;
+        font-weight: bold;
+        padding: $desktopPadding;
+    }
+    &__text {
+        @include footerCopy;
+        padding: $desktopPadding;
+    }
+    }
+
+    .media {
+
+
+    &__img {
+
+    }
+    &__logo {
+        padding: $desktopPadding;
+    }
+    }
+}

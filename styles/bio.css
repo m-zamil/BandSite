@@ -1,0 +1,224 @@
+@font-face {
+  font-family: "Avenir Next";
+  src: url(../../assets/fonts/AvenirNextLTPro-Regular.otf);
+}
+@font-face {
+  font-family: "AvernirNextLTPro";
+  src: url("../assets/fonts/AvenirNextLTPro-Regular.otf");
+  src: url("../assets/fonts/alternative-files/AvenirNextLTPro.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AvernirNextLTPro";
+  src: url("../assets/fonts/AvenirNextLTPro-Bold.otf");
+  src: url("../assets/fonts/alternative-files/AvenirNextLTProBold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AvernirNextLTPro";
+  src: url("../assets/fonts/AvenirNextLTPro-Demi.otf");
+  src: url("../assets/fonts/alternative-files/AvenirNextLTPro-Demi");
+  font-weight: 600;
+  font-style: normal;
+}
+html {
+  font-family: "AvernirNextLTPro";
+  color: bandSiteBlack;
+}
+html .menu {
+  font-family: "AvernirNextLTPro";
+  display: flex;
+  background-color: #323232;
+  color: #ffffff;
+  list-style: none;
+  justify-content: flex-start;
+  margin: 0 auto;
+  padding: 2.25rem;
+  padding-top: 3rem;
+}
+html .menu__logo {
+  max-height: 1.25rem;
+  max-width: 7.5rem;
+  margin-right: auto;
+}
+@media (min-width: 768px) {
+  html .menu__logo {
+    color: #000000;
+  }
+}
+html .menu__title {
+  text-decoration: none;
+  color: #ffffff;
+  margin-right: auto;
+}
+html .menu__title--active {
+  text-decoration: none;
+  color: #ffffff;
+  border-bottom: 1px solid #ffffff;
+  margin-right: auto;
+  margin-left: auto;
+}
+html .hero {
+  display: flex;
+  max-width: 1280px;
+  height: 600px;
+  background-position: center center;
+  font-family: "AvernirNextLTPro";
+  background-image: url(../assets/images/hero-bio.jpg);
+  background-size: cover;
+}
+html .hero__title {
+  flex-direction: column;
+  align-items: center;
+  font: 3.75rem;
+  line-height: 4.25rem;
+  font-weight: bold 700;
+  padding: 2.25rem;
+  color: #ffffff;
+}
+html .bio {
+  display: flex;
+  flex-flow: column;
+  padding: 2.25rem;
+}
+html .text--header {
+  font: 2.25rem;
+  line-height: 2.75rem;
+  font-weight: 700;
+  padding: 2.25rem;
+  padding-top: 3rem;
+}
+html .text--quote {
+  font: 0.875rem;
+  line-height: 1.375rem;
+  font-weight: 400;
+  padding: 2.25rem;
+}
+html .text--quote2 {
+  font: 0.875rem;
+  line-height: 1.375rem;
+  font-weight: 400;
+  padding: 2.25rem;
+}
+html .text--sub-title {
+  font: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+  padding: 2.25rem;
+  padding-top: 3rem;
+}
+html .text--about {
+  font: 0.875rem;
+  line-height: 1.375rem;
+  font-weight: 400;
+  display: inline-flex;
+  padding: 2.25rem;
+}
+html .images-wrapper {
+  background-color: #000000;
+}
+html .gallery {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  padding: 2.25rem;
+}
+html .gallery .information {
+  display: flex;
+  font: 2.25rem;
+  line-height: 2.75rem;
+  font-weight: 700;
+  max-width: 1280px;
+  padding: 2.25rem;
+  padding-top: 3rem;
+}
+@media (min-width: 768px) {
+  html .gallery {
+    flex-direction: row;
+  }
+}
+html .social {
+  display: flex;
+}
+html .social__header {
+  font: 2.25rem;
+  line-height: 2.75rem;
+  font-weight: 700;
+}
+html .social__divider {
+  stroke-width: 0.0625rem;
+  fill: #E1E1E1;
+}
+html .social__form {
+  padding: 2.25rem;
+  color: #AFAFAF;
+}
+html .social__form--section {
+  font: 0.875rem;
+  line-height: 1.375rem;
+  font-weight: 400;
+  color: #AFAFAF;
+}
+html .social__form--input {
+  font: 0.875rem;
+  line-height: 1.375rem;
+  font-weight: 400;
+}
+html .social__button {
+  background-color: #323232;
+  color: #ffffff;
+  height: 2.5rem;
+  min-width: 9.375rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-radius: 0.25rem;
+}
+html .social__button:hover {
+  background-color: #323232;
+  color: #ffffff;
+  height: 2.5rem;
+  min-width: 9.375rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-radius: 0.25rem;
+}
+html .social__comments {
+  color: #323232;
+}
+html .social__comments--name {
+  font-weight: bold;
+}
+html .social__comments--date {
+  color: #AFAFAF;
+}
+html .footer {
+  display: flex;
+  background-color: #323232;
+  color: #ffffff;
+}
+html .footer__title {
+  font: 2.25rem;
+  line-height: 2.75rem;
+  font-weight: 700;
+  padding: 2.25rem;
+  padding-top: 3rem;
+}
+html .footer__name {
+  font: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+  font-weight: bold;
+  padding: 2.25rem;
+}
+html .footer__text {
+  font: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+  padding: 2.25rem;
+}
+html .media__logo {
+  padding: 2.25rem;
+}/*# sourceMappingURL=bio.css.map */
