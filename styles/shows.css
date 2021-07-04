@@ -23,6 +23,10 @@
   font-weight: 600;
   font-style: normal;
 }
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-family: "AvernirNextLTPro";
   color: bandSiteBlack;
@@ -30,13 +34,19 @@ html {
 html .menu {
   font-family: "AvernirNextLTPro";
   display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 1280px;
   background-color: #323232;
   color: #ffffff;
   list-style: none;
-  justify-content: flex-start;
-  margin: 0 auto;
+  margin: auto;
   padding: 2.25rem;
   padding-top: 3rem;
+  padding-left: 3rem;
+  text-decoration: none;
+  border-bottom: 0.0625rem solid #AFAFAF;
 }
 html .menu__logo {
   max-height: 1.25rem;
@@ -52,24 +62,33 @@ html .menu__title {
   text-decoration: none;
   color: #ffffff;
   margin-right: auto;
+  padding: 2.25rem;
 }
 html .menu__title--active {
   text-decoration: none;
+  padding: 2.25rem;
   color: #ffffff;
-  border-bottom: 1px solid #ffffff;
-  margin-right: auto;
-  margin-left: auto;
+  border-bottom: 0.125rem solid #ffffff;
 }
-html .hero {
-  display: flex;
+html .hero-wrapper {
+  width: 100%;
   max-width: 1280px;
-  height: 600px;
-  background-position: center center;
-  font-family: "AvernirNextLTPro";
   background-image: url(../assets/images/hero-shows.jpg);
   background-size: cover;
 }
-html .hero__title {
+html .hero {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  height: 600px;
+  background-position: center center;
+  font-family: "AvernirNextLTPro";
+  margin: 0 auto;
+}
+html .hero__content {
+  flex-basis: 50%;
+}
+html .hero__content--title {
   flex-direction: column;
   align-items: center;
   font: 3.75rem;
@@ -78,7 +97,7 @@ html .hero__title {
   padding: 2.25rem;
   color: #ffffff;
 }
-html .hero__subTitle {
+html .hero__content--subTitle {
   flex-direction: column;
   align-items: center;
   font: 2.25rem;
@@ -86,6 +105,9 @@ html .hero__subTitle {
   font-weight: 700;
   padding: 2.25rem;
   color: #ffffff;
+}
+html .hero__music {
+  flex-basis: 50%;
 }
 html .shows {
   display: flex;

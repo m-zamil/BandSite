@@ -1,5 +1,9 @@
 @use "../styles/_partials/partials" as *;
 
+* {
+    box-sizing: border-box;
+}
+
 html {
     font-family: "AvernirNextLTPro";
     color: bandSiteBlack;
@@ -9,13 +13,20 @@ html {
     .menu {
         font-family: "AvernirNextLTPro";
         display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: center;
+        max-width: 1280px;
         background-color: $bandSiteBlack;
         color: #ffffff;
         list-style: none;
-        justify-content: flex-start;
-        margin: 0 auto;
+        margin: auto;
         padding: $desktopPadding;
-        padding-top: 3rem;
+        padding-top: $desktopHeaderPadding;
+        padding-left: $desktopHeaderPadding;
+        text-decoration: none;
+        border-bottom: .0625rem solid $silver;
+        // padding-top: 3rem;
     &__logo {
         max-height: 1.25rem;
         max-width: 7.5rem;
@@ -28,14 +39,15 @@ html {
         text-decoration: none;
         color: $white;
         margin-right: auto;
+        padding: $desktopPadding;
 
     
     &--active {
         text-decoration: none;
+        padding: $desktopPadding;
         color: $white;
-        border-bottom: 1px solid $white;
-        margin-right: auto;
-        margin-left: auto;
+        border-bottom: .125rem solid $white;
+
     }
 
     }
@@ -43,29 +55,41 @@ html {
 
 //Hero//
 
+    .hero-wrapper {
+        width: 100%;
+        max-width: 1280px;
+        background-image: url(../assets/images/hero-shows.jpg);
+        background-size:cover;
+    }
     .hero {
         display: flex;
-        max-width: 1280px;
+        flex: 1;
+        flex-wrap: wrap;
         height: 600px;
         background-position: center center;
         font-family:'AvernirNextLTPro';
-        background-image: url(../assets/images/hero-shows.jpg);
-        background-size:cover;
-
-    &__title {
-    flex-direction: column;
-    align-items: center;
-    @include pageHeader;
-    padding: $desktopPadding;
-    color: $white;
-    }
-    &__subTitle {
-        flex-direction: column;
-        align-items: center;
-        @include sectionHeader;
-        padding: $desktopPadding;
-        color: $white;
+        margin: 0 auto;
+    &__content{
+        flex-basis: 50%;
+        &--title {
+            flex-direction: column;
+            align-items: center;
+            @include pageHeader;
+            padding: $desktopPadding;
+            color: $white;
         }
+        &--subTitle {
+            flex-direction: column;
+            align-items: center;
+            @include sectionHeader;
+            padding: $desktopPadding;
+            color: $white;
+            }
+    }
+    &__music {
+        flex-basis: 50%;
+    }
+
     }
 
 // Shows//
