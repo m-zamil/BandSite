@@ -39,7 +39,7 @@ html .menu {
   align-items: center;
   max-width: 1280px;
   background-color: #323232;
-  color: #ffffff;
+  color: #E1E1E1;
   list-style: none;
   margin: auto;
   padding: 2.25rem;
@@ -60,13 +60,17 @@ html .menu__logo {
 }
 html .menu__title {
   text-decoration: none;
-  color: #ffffff;
+  color: #E1E1E1;
   margin-right: auto;
   padding: 2.25rem;
 }
 html .menu__title--active {
   text-decoration: none;
   padding: 2.25rem;
+  color: #ffffff;
+  border-bottom: 0.125rem solid #ffffff;
+}
+html .menu__title:hover {
   color: #ffffff;
   border-bottom: 0.125rem solid #ffffff;
 }
@@ -86,7 +90,7 @@ html .hero {
   margin: 0 auto;
 }
 html .hero__content {
-  flex-basis: 50%;
+  width: 50%;
 }
 html .hero__content--title {
   flex-direction: column;
@@ -96,6 +100,7 @@ html .hero__content--title {
   font-weight: bold 700;
   padding: 2.25rem;
   color: #ffffff;
+  width: 50%;
 }
 html .hero__content--subTitle {
   flex-direction: column;
@@ -110,13 +115,20 @@ html .hero__music {
   flex-basis: 50%;
 }
 html .shows {
+  width: 100%;
+}
+html .shows__wrapper {
   display: flex;
+  flex-direction: row;
+  width: 100%;
+  border-bottom: 0.0625rem solid #E1E1E1;
 }
 html .shows__section {
   font: 0.875rem;
   line-height: 1.375rem;
   font-weight: 400;
   color: #AFAFAF;
+  width: 25%;
 }
 html .shows__button {
   background-color: #323232;
@@ -127,10 +139,29 @@ html .shows__button {
   padding-right: 2rem;
   border-radius: 0.25rem;
 }
+html .shows__text {
+  width: 25%;
+}
+html .footer-wrapper {
+  display: flex;
+  max-width: 1280px;
+  padding: 2.25rem;
+  width: 100%;
+  justify-content: space-between;
+}
 html .footer {
   display: flex;
   background-color: #323232;
   color: #ffffff;
+  flex-wrap: wrap;
+}
+html .footer__logo {
+  padding: 2.25rem;
+}
+html .footer__row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 }
 html .footer__title {
   font: 2.25rem;
@@ -152,6 +183,6 @@ html .footer__text {
   font-weight: 400;
   padding: 2.25rem;
 }
-html .media__logo {
-  padding: 2.25rem;
+html .media {
+  margin-right: auto;
 }/*# sourceMappingURL=shows.css.map */
