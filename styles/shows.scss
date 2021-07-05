@@ -17,17 +17,14 @@ html {
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: center;
-    max-width: 1280px;
     background-color: $bandSiteBlack;
     color: $mercury;
     list-style: none;
     margin: auto;
-    padding: $desktopPadding;
-    padding-top: $desktopHeaderPadding;
+    padding: 2rem;
     padding-left: $desktopHeaderPadding;
     text-decoration: none;
-    border-bottom: 0.0625rem solid $silver;
-    // padding-top: 3rem;
+
     &__logo {
       max-height: 1.25rem;
       max-width: 7.5rem;
@@ -44,9 +41,10 @@ html {
 
       &--active {
         text-decoration: none;
-        padding: $desktopPadding;
+        margin: $desktopMargin;
+        padding-bottom: 2rem;
         color: $white;
-        border-bottom: 0.125rem solid $white;
+        border-bottom: 0.275rem solid $white;
       }
     }
     &__title:hover {
@@ -59,8 +57,12 @@ html {
 
   .hero-wrapper {
     width: 100%;
-    max-width: 1280px;
-    background-image: url(../assets/images/hero-shows.jpg);
+    background: linear-gradient(
+        0deg,
+        rgba(50, 50, 49, 0.5),
+        rgba(50, 50, 50, 0.5)
+      ),
+      url(../assets/images/hero-shows.jpg);
     background-size: cover;
   }
   .hero {
@@ -71,26 +73,37 @@ html {
     background-position: center center;
     font-family: "AvernirNextLTPro";
     margin: 0 auto;
+    padding: 0 120px;
     &__content {
-      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex: 1;
+      &--text h1,
+      h2 {
+        padding: 0;
+        margin-bottom: 0;
+      }
       &--title {
         flex-direction: column;
         align-items: center;
         @include pageHeader;
         padding: $desktopPadding;
         color: $white;
-        width: 50%;
       }
       &--subTitle {
         flex-direction: column;
         align-items: center;
         @include sectionHeader;
         padding: $desktopPadding;
+        font-weight: 400;
         color: $white;
+        font-size: 1.75rem;
+        margin-bottom: 20px;
       }
     }
     &__music {
-      flex-basis: 50%;
+      flex-basis: 35%;
     }
   }
 
@@ -98,13 +111,14 @@ html {
 
   .shows {
     width: 100%;
-    // display:flex;
+    padding: 60px 120px;
     &__wrapper {
       display: flex;
       flex-direction: row;
-      // justify-content: space-between;
       width: 100%;
-      border-bottom: 0.0625rem solid $mercury;
+      border-bottom: 0.13rem solid $mercury;
+      align-items: center;
+      padding: 8px 0px;
     }
     &__section {
       @include bodyCopy;
@@ -124,46 +138,51 @@ html {
   .footer-wrapper {
     display: flex;
     max-width: 1280px;
-    // margin: 0 auto;
-    padding: $desktopPadding;
+    padding: 0;
     width: 100%;
     justify-content: space-between;
-    // padding-top: 16px;
   }
   .footer {
     display: flex;
     background-color: $bandSiteBlack;
     color: #ffffff;
     flex-wrap: wrap;
+    padding: 0 100px;
     &__logo {
       padding: $desktopPadding;
-      // margin-left: auto;
     }
     &__row {
       display: flex;
       flex-direction: row;
       width: 100%;
+      & > div {
+        padding-right: 105px;
+      }
     }
-    &__title {
+    &-title {
+      font-size: 3rem;
       @include sectionHeader;
       padding: $desktopPadding;
-      padding-top: $desktopHeaderPadding;
+      padding-left: 0;
     }
     &__name {
       @include footerCopy;
       font-weight: bold;
-      padding: $desktopPadding;
+      line-height: 1.7;
     }
     &__text {
       @include footerCopy;
-      padding: $desktopPadding;
+      line-height: 1.7;
     }
   }
 
   .media {
     margin-right: auto;
+    padding-left: 50px;
+    display: flex;
 
     &__img {
+      padding-right: 40px;
     }
   }
 }

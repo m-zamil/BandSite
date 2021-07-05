@@ -13,19 +13,14 @@ html {
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: center;
-    max-width: 1280px;
     background-color: $bandSiteBlack;
     color: $mercury;
     list-style: none;
     margin: auto;
     padding: 2rem;
 
-    // padding: $desktopPadding;
-    // padding-top: $desktopHeaderPadding;
     padding-left: $desktopHeaderPadding;
     text-decoration: none;
-    border-bottom: 0.0625rem solid $silver;
-    // padding-top: 3rem;
     &__logo {
       max-height: 1.25rem;
       max-width: 7.5rem;
@@ -59,18 +54,22 @@ html {
   .hero {
     display: flex;
     align-items: center;
-    // max-width: 1280px;
     height: 37.5rem;
     background-position: center center;
     font-family: "AvernirNextLTPro";
     background-image: url(../assets/images/hero-bio.jpg);
+    background: linear-gradient(
+        0deg,
+        rgba(50, 50, 49, 0.5),
+        rgba(50, 50, 50, 0.5)
+      ),
+      url(../assets/images/hero-bio.jpg);
     background-size: cover;
 
     &__title {
       @include pageHeader;
       padding: $desktopHeaderPadding;
-      // padding-top: $desktopHeaderPadding;
-      // padding-left: $desktopHeaderPadding;
+
       padding-left: 8rem;
       color: $white;
     }
@@ -97,7 +96,6 @@ html {
       }
       &--quote {
         @include subHeader;
-        // padding: $desktopPadding;
       }
       &--quote2 {
         @include bodyCopy;
@@ -106,8 +104,7 @@ html {
       }
       &--sub-title {
         @include subHeader;
-        // padding: $desktopPadding;
-        // padding-top: $desktopHeaderPadding;
+
         font-weight: bold;
         font-size: 1.5rem;
       }
@@ -121,11 +118,6 @@ html {
   //Gallery//
 
   .images_wrapper {
-    // background-color: $bandSiteDarkBlack;
-    // display: flex;
-    // flex-flow: row wrap;
-    // justify-content: space-evenly;
-    // align-content: space-evenly;
     padding: 100px;
     & h2 {
       font-size: 2rem;
@@ -158,7 +150,7 @@ html {
   .gallery {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     align-content: center;
     padding: $desktopPadding;
     .information {
@@ -255,8 +247,7 @@ html {
           left: -70px;
           content: "";
           display: inline-block;
-          //   background-image: url(../assets/images/Mohan-muruge.jpg);
-          //   background-size: cover;
+
           background-color: $mercury;
           width: 50px;
           border-radius: 50%;
@@ -287,11 +278,9 @@ html {
   .footer-wrapper {
     display: flex;
     max-width: 1280px;
-    // margin: 0 auto;
     padding: 0;
     width: 100%;
     justify-content: space-between;
-    // padding-top: 16px;
   }
   .footer {
     display: flex;
@@ -301,7 +290,6 @@ html {
     padding: 0 100px;
     &__logo {
       padding: $desktopPadding;
-      // margin-left: auto;
     }
     &__row {
       display: flex;
@@ -316,18 +304,15 @@ html {
       @include sectionHeader;
       padding: $desktopPadding;
       padding-left: 0;
-      //   padding-top: $desktopHeaderPadding;
     }
     &__name {
       @include footerCopy;
       font-weight: bold;
       line-height: 1.7;
-      //   padding: $desktopPadding;
     }
     &__text {
       @include footerCopy;
       line-height: 1.7;
-      //   padding: $desktopPadding;
     }
   }
 
