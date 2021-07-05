@@ -1,14 +1,13 @@
-@use "./_partials/partials" as *;
-
+@import "./_partials//partials";
+@use "./_partials/_partials" as *;
 
 html {
-    font-family: "AvernirNextLTPro";
-    color: bandSiteBlack;
+  font-family: "AvernirNextLTPro";
+  color: $bandSiteBlack;
 
+  //Menu//
 
-//Menu//
-    
-.menu {
+  .menu {
     font-family: "AvernirNextLTPro";
     display: flex;
     flex-flow: row wrap;
@@ -19,157 +18,161 @@ html {
     color: $mercury;
     list-style: none;
     margin: auto;
-    padding: $desktopPadding;
-    padding-top: $desktopHeaderPadding;
+    padding: 2rem;
+
+    // padding: $desktopPadding;
+    // padding-top: $desktopHeaderPadding;
     padding-left: $desktopHeaderPadding;
     text-decoration: none;
-    border-bottom: .0625rem solid $silver;
+    border-bottom: 0.0625rem solid $silver;
     // padding-top: 3rem;
-&__logo {
-    max-height: 1.25rem;
-    max-width: 7.5rem;
-    margin-right: auto;
-    @include tablet {
+    &__logo {
+      max-height: 1.25rem;
+      max-width: 7.5rem;
+      margin-right: auto;
+      @include tablet {
         color: $bandSiteDarkBlack;
+      }
     }
-}
-&__title{
-    text-decoration: none;
-    color: $mercury;
-    margin-right: auto;
-    padding: $desktopPadding;
+    &__title {
+      text-decoration: none;
+      color: $mercury;
+      margin-right: auto;
+      padding: $desktopPadding;
 
+      &--active {
+        text-decoration: none;
+        margin: $desktopMargin;
+        padding-bottom: 2rem;
+        color: $white;
+        border-bottom: 0.275rem solid $white;
+      }
+    }
+    &__title:hover {
+      color: $white;
+      border-bottom: 0.275rem solid $white;
+    }
+  }
 
-&--active {
-    text-decoration: none;
-    padding: $desktopPadding;
-    color: $white;
-    border-bottom: .125rem solid $white;
+  //Hero//
 
-}
-
-}
-&__title:hover{
-    color: $white;
-    border-bottom: .125rem solid $white;
-}
-}
-    
-
-//Hero//
-
-    .hero {
-        display: flex;
-        align-items: center;
-        // max-width: 1280px;
-        height: 37.5rem;
-        background-position: center center;
-        font-family:'AvernirNextLTPro';
-        background-image: url(../assets/images/hero-bio.jpg);
-        background-size:cover;
+  .hero {
+    display: flex;
+    align-items: center;
+    // max-width: 1280px;
+    height: 37.5rem;
+    background-position: center center;
+    font-family: "AvernirNextLTPro";
+    background-image: url(../assets/images/hero-bio.jpg);
+    background-size: cover;
 
     &__title {
-        @include pageHeader;
-        padding: $desktopHeaderPadding;
-        // padding-top: $desktopHeaderPadding;
-        // padding-left: $desktopHeaderPadding;
-        color: $white;
-        }
+      @include pageHeader;
+      padding: $desktopHeaderPadding;
+      // padding-top: $desktopHeaderPadding;
+      // padding-left: $desktopHeaderPadding;
+      padding-left: 8rem;
+      color: $white;
     }
+  }
 
-//Bio//
+  //Bio//
 
-    .bio {
-        display: flex;
-        flex-flow: column;
-        padding: $desktopPadding;
+  .bio {
+    display: flex;
+    flex-flow: column;
+    padding: $desktopPadding;
 
-    }
     .photo {
-
     }
-    .text {
-
-    &--header {
+    &__text {
+      &__wrapper {
+        display: flex;
+      }
+      &--header {
         @include sectionHeader;
         padding: $desktopPadding;
         padding-top: $desktopHeaderPadding;
-
-    }
-    &--quote {
+        padding-bottom: 2.25rem;
+      }
+      &--quote {
         @include subHeader;
-        padding: $desktopPadding;
-    }
-    &--quote2 {
+        // padding: $desktopPadding;
+      }
+      &--quote2 {
         @include bodyCopy;
-        padding: $desktopPadding;
-    }
-    &--sub-title {
+        padding-bottom: $desktopPadding;
+        font-weight: bold;
+      }
+      &--sub-title {
         @include subHeader;
-        padding: $desktopPadding;
-        padding-top: $desktopHeaderPadding;
-    
-    }
-    &--about {
+        // padding: $desktopPadding;
+        // padding-top: $desktopHeaderPadding;
+        font-weight: bold;
+        font-size: 1.5rem;
+      }
+      &--about {
         @include bodyCopy;
         display: inline-flex;
-        padding: $desktopPadding;
-
+        padding: 10px;
+      }
     }
+  }
+  //Gallery//
+
+  .images_wrapper {
+    // background-color: $bandSiteDarkBlack;
+    // display: flex;
+    // flex-flow: row wrap;
+    // justify-content: space-evenly;
+    // align-content: space-evenly;
+    padding: 100px;
+    & h2 {
+      font-size: 2rem;
+      margin-top: 0;
     }
+    .gallery {
+      //   width: 33%;
+      & header {
+      }
 
-//Gallery//
-
-    .images-wrapper{
-        background-color:$bandSiteDarkBlack;
+      & img {
         display: flex;
         flex-flow: row wrap;
         justify-content: space-evenly;
         align-content: space-evenly;
-        .gallery {
-            width: 33%;
-        &header{
-
+        width: 18.75rem;
+        padding: $desktopPadding;
+        width: 330px;
+        padding: 10px;
+        &--one {
         }
-        &img {
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: space-evenly;
-            align-content: space-evenly;
-            width: 18.75rem;
-            padding: $desktopPadding;
-            &--one {
-
-            }
-            &--two {
-
-            }
-            &--three {
-
-            }
-
+        &--two {
         }
+        &--three {
         }
+      }
     }
+  }
 
-    .gallery {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-evenly;
-        align-content: center;
-        padding: $desktopPadding;
+  .gallery {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-content: center;
+    padding: $desktopPadding;
     .information {
-        display: flex;
-        @include sectionHeader;
-        max-width: 1280px;
-        padding: $desktopPadding;
-        padding-top: $desktopHeaderPadding;
+      display: flex;
+      @include sectionHeader;
+      max-width: 1280px;
+      padding: $desktopPadding;
+      padding-top: $desktopHeaderPadding;
     }
     @include tablet {
-        flex-direction: row;
+      flex-direction: row;
     }
     // @include $mobile {
-        
+
     // }
     // &__img {
     //     margin-right: 2.25rem;
@@ -181,98 +184,161 @@ html {
     //     padding-right: 2.25rem;
     //     width: 300px;
     // }
-    }
-    
-//Social//
+  }
 
-    .social{
+  //Social//
+
+  .social {
+    padding: 100px;
+    padding-left: 146px;
+    padding-right: 146px;
+    padding-top: 0;
+    &__header {
+      @include sectionHeader;
+      margin-top: 0;
+    }
+    &__divider {
+      stroke-width: 0.0625rem;
+      fill: $mercury;
+    }
+    &__form {
+      padding: $desktopPadding;
+      width: 500px;
+      margin: 0 auto;
+      color: $silver;
+      &--avatar {
+        position: relative;
+        &::before {
+          position: absolute;
+          left: -70px;
+          content: "";
+          display: inline-block;
+          background-image: url(../assets/images/Mohan-muruge.jpg);
+          background-size: cover;
+          width: 50px;
+          border-radius: 50%;
+          height: 50px;
+          top: 25%;
+        }
+      }
+
+      &--section {
+        @include bodyCopy;
+        color: $silver;
+        margin-bottom: 2px;
+      }
+      &--input {
+        @include bodyCopy;
+        outline: $mercury;
+        border: 1px solid $mercury;
+        width: 500px;
+        border-radius: 4px;
+        background-color: $mercury;
+        padding: 16px;
+      }
+
+      &__button {
+        @include ctaButton;
+      }
+      &__button:hover {
+        @include ctaButton;
+      }
+    }
+    &__comments {
+      color: $bandSiteBlack;
+      width: 572px;
+      margin: 0 auto;
+      &--comment {
+        position: relative;
+        &::before {
+          position: absolute;
+          left: -70px;
+          content: "";
+          display: inline-block;
+          //   background-image: url(../assets/images/Mohan-muruge.jpg);
+          //   background-size: cover;
+          background-color: $mercury;
+          width: 50px;
+          border-radius: 50%;
+          height: 50px;
+          top: 16px;
+        }
+      }
+      &--row {
         display: flex;
-        &__header {
-            @include sectionHeader;
+        justify-content: space-between;
+        & p {
+          margin-bottom: 0;
         }
-        &__divider {
-            stroke-width: .0625rem;
-            fill: $mercury;
-        }
-        &__form {
-            padding: $desktopPadding;
-            color: $silver;
-            &--section {
-                @include bodyCopy;
-                color: $silver;
-            }
-            &--input {
-                @include bodyCopy;
-                outline: $mercury;
-            }
-        }
-        &__button {
-                    @include ctaButton;
-        }
-        &__button:hover {
-            @include ctaButton;
-        }
-        &__comments {
-            color: $bandSiteBlack;
-            &--name {
-                font-weight: bold;
-            }
-            &--date {
-                color: $silver
-            }
-            &--text {
-
-            }
-        }
+      }
+      &--name {
+        font-weight: bold;
+      }
+      &--date {
+        color: $silver;
+      }
+      &--text {
+      }
     }
+  }
 
-//Footer//
+  //Footer//
 
-.footer-wrapper {
+  .footer-wrapper {
     display: flex;
     max-width: 1280px;
     // margin: 0 auto;
-    padding: $desktopPadding;
+    padding: 0;
     width: 100%;
     justify-content: space-between;
     // padding-top: 16px;
-}
-.footer {
+  }
+  .footer {
     display: flex;
     background-color: $bandSiteBlack;
     color: #ffffff;
     flex-wrap: wrap;
-&__logo {
-    padding: $desktopPadding;
-    // margin-left: auto;
-}
-&__row {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-}
-&__title {
-    @include sectionHeader;
-    padding: $desktopPadding;
-    padding-top: $desktopHeaderPadding;
-}
-&__name {
-    @include footerCopy;
-    font-weight: bold;
-    padding: $desktopPadding;
-}
-&__text {
-    @include footerCopy;
-    padding: $desktopPadding;
-}
-}
+    padding: 0 100px;
+    &__logo {
+      padding: $desktopPadding;
+      // margin-left: auto;
+    }
+    &__row {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      & > div {
+        padding-right: 105px;
+      }
+    }
+    &-title {
+      font-size: 3rem;
+      @include sectionHeader;
+      padding: $desktopPadding;
+      padding-left: 0;
+      //   padding-top: $desktopHeaderPadding;
+    }
+    &__name {
+      @include footerCopy;
+      font-weight: bold;
+      line-height: 1.7;
+      //   padding: $desktopPadding;
+    }
+    &__text {
+      @include footerCopy;
+      line-height: 1.7;
+      //   padding: $desktopPadding;
+    }
+  }
 
-.media {
+  .media {
     margin-right: auto;
+    padding-left: 30px;
+    display: flex;
 
-&__img {
-
-}
-
-}
+    &__img {
+      max-width: 30px;
+      padding: 20px;
+    }
+  }
 }

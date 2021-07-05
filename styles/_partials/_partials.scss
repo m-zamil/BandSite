@@ -4,142 +4,146 @@ $desktop: 1280px;
 
 $bandSiteBlack: #323232;
 $bandSiteDarkBlack: #000000;
-$silver: #AFAFAF;
-$mercury: #E1E1E1;
+$silver: #afafaf;
+$mercury: #e1e1e1;
 $white: #ffffff;
-$alabaster: #FAFAFA;
+$alabaster: #fafafa;
 
 // Desktop & Tablet Text Styles //
 
 @mixin pageHeader {
-    font: 3.75rem;
-    line-height: 4.25rem;
-    font-weight: bold 700;
+  font-size: 3.75rem;
+  line-height: 4.25rem;
+  font-weight: bold;
 }
 
 @mixin sectionHeader {
-    font: 2.25rem;
-    line-height: 2.75rem;
-    font-weight: 700;
+  font-size: 2.25rem;
+  line-height: 2.75rem;
+  font-weight: 700;
 }
 
 @mixin subHeader {
-    font: 1.5rem;
-    line-height: 2rem;
-    font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
 }
 
 @mixin bodyCopy {
-    font: .875rem;
-    line-height: 1.375rem;
-    font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-weight: 400;
 }
 
 @mixin footerCopy {
-    font: .875rem;
-    line-height: 1.25rem;
-    font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 400;
 }
 
 @mixin labelsButtons {
-    font: .75rem;
-    line-height: 1.375rem;
-    font-weight: bold 700;
+  font-size: 0.75rem;
+  line-height: 1.375rem;
+  font-weight: bold 700;
 }
 
 // Mobile Text Styles //
 
 @mixin mobilePageHeader {
-    font: 1.5rem;
-    line-height: 2rem;
-    font-weight: bold 700;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: bold 700;
 }
 
 @mixin mobileSectionHeader {
-    font: 1.5rem;
-    line-height: 2rem;
-    font-weight: bold 700;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: bold 700;
 }
 
 @mixin mobileSubHeader {
-    font: .875rem;
-    line-height: 1.375rem;
-    font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-weight: 600;
 }
 
 @mixin mobileBodyCopy {
-    font: .8125rem;
-    line-height: 1.125rem;
-    font-weight: 400;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: 400;
 }
 
 @mixin mobileFooterCopy {
-    font: .8125rem;
-    line-height: 1.125rem;
-    font-weight: 400;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: 400;
 }
 
 @mixin mobileLabelsButtons {
-    font: .625rem;
-    line-height: 1.375rem;
-    font-weight: bold 700;
+  font-size: 0.625rem;
+  line-height: 1.375rem;
+  font-weight: bold 700;
 }
 
-// Padding //  
+// Padding //
 
 $desktopHeaderPadding: 3rem;
 $desktopPadding: 2.25rem;
 $mobileHeaderPadding: 1.5rem;
 $mobilePadding: 1rem;
 
+//margin
+$desktopHeaderMargin: 3rem;
+$desktopMargin: 2.25rem;
+$mobileHeaderMargin: 1.5rem;
+$mobileMargin: 1rem;
+
 // Buttons //
 
 @mixin ctaButton {
-    background-color: $bandSiteBlack;
-    color: $white;
-    height: 2.5rem;
-    min-width: 9.375rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    border-radius: .25rem;
+  background-color: $bandSiteBlack;
+  color: $white;
+  height: 2.5rem;
+  min-width: 9.375rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-radius: 0.25rem;
 }
 
 // Browser Sizes //
 
 @mixin tablet {
-    @media (min-width: $tablet) {
-        @content;
-    }
+  @media (min-width: $tablet) {
+    @content;
+  }
 }
 
 @mixin mainFont {
-    font-family: 'Avenir Next';
-    
+  font-family: "Avenir Next";
 }
 @font-face {
-    font-family: 'Avenir Next';
-    src: url(../../assets/fonts/AvenirNextLTPro-Regular.otf)
+  font-family: "Avenir Next";
+  src: url(../../assets/fonts/AvenirNextLTPro-Regular.otf);
 }
 
 @font-face {
-    font-family: "AvernirNextLTPro";
-    src: url("../assets/fonts/AvenirNextLTPro-Regular.otf");
-    src: url("../assets/fonts/alternative-files/AvenirNextLTPro.ttf");
-    font-weight: normal;
-    font-style: normal;
+  font-family: "AvernirNextLTPro";
+  src: url("../assets/fonts/AvenirNextLTPro-Regular.otf");
+  src: url("../assets/fonts/alternative-files/AvenirNextLTPro.ttf");
+  font-weight: normal;
+  font-style: normal;
 }
 @font-face {
-    font-family: "AvernirNextLTPro";
-    src: url("../assets/fonts/AvenirNextLTPro-Bold.otf");
-    src: url("../assets/fonts/alternative-files/AvenirNextLTProBold.ttf");
-    font-weight: 700;
-    font-style: normal;
+  font-family: "AvernirNextLTPro";
+  src: url("../assets/fonts/AvenirNextLTPro-Bold.otf");
+  src: url("../assets/fonts/alternative-files/AvenirNextLTProBold.ttf");
+  font-weight: 700;
+  font-style: normal;
 }
 @font-face {
-    font-family: "AvernirNextLTPro";
-    src: url("../assets/fonts/AvenirNextLTPro-Demi.otf");
-    src: url("../assets/fonts/alternative-files/AvenirNextLTPro-Demi");
-    font-weight: 600;
-    font-style: normal;
+  font-family: "AvernirNextLTPro";
+  src: url("../assets/fonts/AvenirNextLTPro-Demi.otf");
+  src: url("../assets/fonts/alternative-files/AvenirNextLTPro-Demi");
+  font-weight: 600;
+  font-style: normal;
 }
-

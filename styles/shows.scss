@@ -1,130 +1,127 @@
+@import "../styles/_partials/partials";
 @use "../styles/_partials/partials" as *;
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
+  font-family: "AvernirNextLTPro";
+  color: bandSiteBlack;
+
+  //Menu//
+
+  .menu {
     font-family: "AvernirNextLTPro";
-    color: bandSiteBlack;
-
-    //Menu//
-    
-    .menu {
-        font-family: "AvernirNextLTPro";
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: flex-start;
-        align-items: center;
-        max-width: 1280px;
-        background-color: $bandSiteBlack;
-        color: $mercury;
-        list-style: none;
-        margin: auto;
-        padding: $desktopPadding;
-        padding-top: $desktopHeaderPadding;
-        padding-left: $desktopHeaderPadding;
-        text-decoration: none;
-        border-bottom: .0625rem solid $silver;
-        // padding-top: 3rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 1280px;
+    background-color: $bandSiteBlack;
+    color: $mercury;
+    list-style: none;
+    margin: auto;
+    padding: $desktopPadding;
+    padding-top: $desktopHeaderPadding;
+    padding-left: $desktopHeaderPadding;
+    text-decoration: none;
+    border-bottom: 0.0625rem solid $silver;
+    // padding-top: 3rem;
     &__logo {
-        max-height: 1.25rem;
-        max-width: 7.5rem;
-        margin-right: auto;
-        @include tablet {
-            color: $bandSiteDarkBlack;
-        }
+      max-height: 1.25rem;
+      max-width: 7.5rem;
+      margin-right: auto;
+      @include tablet {
+        color: $bandSiteDarkBlack;
+      }
     }
-    &__title{
-        text-decoration: none;
-        color: $mercury;
-        margin-right: auto;
-        padding: $desktopPadding;
+    &__title {
+      text-decoration: none;
+      color: $mercury;
+      margin-right: auto;
+      padding: $desktopPadding;
 
-    
-    &--active {
+      &--active {
         text-decoration: none;
         padding: $desktopPadding;
         color: $white;
-        border-bottom: .125rem solid $white;
-
+        border-bottom: 0.125rem solid $white;
+      }
     }
-
+    &__title:hover {
+      color: $white;
+      border-bottom: 0.125rem solid $white;
     }
-    &__title:hover{
+  }
+
+  //Hero//
+
+  .hero-wrapper {
+    width: 100%;
+    max-width: 1280px;
+    background-image: url(../assets/images/hero-shows.jpg);
+    background-size: cover;
+  }
+  .hero {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    height: 600px;
+    background-position: center center;
+    font-family: "AvernirNextLTPro";
+    margin: 0 auto;
+    &__content {
+      width: 50%;
+      &--title {
+        flex-direction: column;
+        align-items: center;
+        @include pageHeader;
+        padding: $desktopPadding;
         color: $white;
-        border-bottom: .125rem solid $white;
-    }
-    }
-
-//Hero//
-
-    .hero-wrapper {
-        width: 100%;
-        max-width: 1280px;
-        background-image: url(../assets/images/hero-shows.jpg);
-        background-size:cover;
-    }
-    .hero {
-        display: flex;
-        flex: 1;
-        flex-wrap: wrap;
-        height: 600px;
-        background-position: center center;
-        font-family:'AvernirNextLTPro';
-        margin: 0 auto;
-    &__content{
         width: 50%;
-        &--title {
-            flex-direction: column;
-            align-items: center;
-            @include pageHeader;
-            padding: $desktopPadding;
-            color: $white;
-            width: 50%;
-        }
-        &--subTitle {
-            flex-direction: column;
-            align-items: center;
-            @include sectionHeader;
-            padding: $desktopPadding;
-            color: $white;
-            }
+      }
+      &--subTitle {
+        flex-direction: column;
+        align-items: center;
+        @include sectionHeader;
+        padding: $desktopPadding;
+        color: $white;
+      }
     }
     &__music {
-        flex-basis: 50%;
+      flex-basis: 50%;
     }
+  }
 
-    }
+  // Shows//
 
-// Shows//
-
-.shows{
+  .shows {
     width: 100%;
     // display:flex;
     &__wrapper {
-        display:flex; 
-        flex-direction: row;
-        // justify-content: space-between;
-        width: 100%;
-        border-bottom: .0625rem solid $mercury;
+      display: flex;
+      flex-direction: row;
+      // justify-content: space-between;
+      width: 100%;
+      border-bottom: 0.0625rem solid $mercury;
     }
-    &__section{
-        @include bodyCopy;
-        color: $silver;
-        width: 25%;
+    &__section {
+      @include bodyCopy;
+      color: $silver;
+      width: 25%;
     }
-    &__button{
-        @include ctaButton;
+    &__button {
+      @include ctaButton;
     }
     &__text {
-        width: 25%;
+      width: 25%;
     }
-}
+  }
 
-//Footer//
+  //Footer//
 
-.footer-wrapper {
+  .footer-wrapper {
     display: flex;
     max-width: 1280px;
     // margin: 0 auto;
@@ -132,44 +129,41 @@ html {
     width: 100%;
     justify-content: space-between;
     // padding-top: 16px;
-}
-.footer {
+  }
+  .footer {
     display: flex;
     background-color: $bandSiteBlack;
     color: #ffffff;
     flex-wrap: wrap;
-&__logo {
-    padding: $desktopPadding;
-    // margin-left: auto;
-}
-&__row {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-}
-&__title {
-    @include sectionHeader;
-    padding: $desktopPadding;
-    padding-top: $desktopHeaderPadding;
-}
-&__name {
-    @include footerCopy;
-    font-weight: bold;
-    padding: $desktopPadding;
-}
-&__text {
-    @include footerCopy;
-    padding: $desktopPadding;
-}
-}
+    &__logo {
+      padding: $desktopPadding;
+      // margin-left: auto;
+    }
+    &__row {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+    }
+    &__title {
+      @include sectionHeader;
+      padding: $desktopPadding;
+      padding-top: $desktopHeaderPadding;
+    }
+    &__name {
+      @include footerCopy;
+      font-weight: bold;
+      padding: $desktopPadding;
+    }
+    &__text {
+      @include footerCopy;
+      padding: $desktopPadding;
+    }
+  }
 
-.media {
+  .media {
     margin-right: auto;
 
-&__img {
-
+    &__img {
+    }
+  }
 }
-
-}
-}
-

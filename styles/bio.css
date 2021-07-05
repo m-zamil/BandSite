@@ -2,6 +2,7 @@
   font-family: "Avenir Next";
   src: url(../../assets/fonts/AvenirNextLTPro-Regular.otf);
 }
+
 @font-face {
   font-family: "AvernirNextLTPro";
   src: url("../assets/fonts/AvenirNextLTPro-Regular.otf");
@@ -9,6 +10,7 @@
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: "AvernirNextLTPro";
   src: url("../assets/fonts/AvenirNextLTPro-Bold.otf");
@@ -16,6 +18,7 @@
   font-weight: 700;
   font-style: normal;
 }
+
 @font-face {
   font-family: "AvernirNextLTPro";
   src: url("../assets/fonts/AvenirNextLTPro-Demi.otf");
@@ -23,175 +26,281 @@
   font-weight: 600;
   font-style: normal;
 }
+
+@use "./_partials/_partials" as *;
 html {
   font-family: "AvernirNextLTPro";
-  color: bandSiteBlack;
+  color: #323232;
 }
+
 html .menu {
   font-family: "AvernirNextLTPro";
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   max-width: 1280px;
   background-color: #323232;
-  color: #E1E1E1;
+  color: #e1e1e1;
   list-style: none;
   margin: auto;
-  padding: 2.25rem;
-  padding-top: 3rem;
+  padding: 2rem;
   padding-left: 3rem;
   text-decoration: none;
-  border-bottom: 0.0625rem solid #AFAFAF;
+  border-bottom: 0.0625rem solid #afafaf;
 }
+
 html .menu__logo {
   max-height: 1.25rem;
   max-width: 7.5rem;
   margin-right: auto;
 }
+
 @media (min-width: 768px) {
   html .menu__logo {
     color: #000000;
   }
 }
+
 html .menu__title {
   text-decoration: none;
-  color: #E1E1E1;
+  color: #e1e1e1;
   margin-right: auto;
   padding: 2.25rem;
 }
+
 html .menu__title--active {
   text-decoration: none;
-  padding: 2.25rem;
+  margin: 2.25rem;
+  padding-bottom: 2rem;
   color: #ffffff;
-  border-bottom: 0.125rem solid #ffffff;
+  border-bottom: 0.275rem solid #ffffff;
 }
+
 html .menu__title:hover {
   color: #ffffff;
-  border-bottom: 0.125rem solid #ffffff;
+  border-bottom: 0.275rem solid #ffffff;
 }
+
 html .hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 37.5rem;
   background-position: center center;
   font-family: "AvernirNextLTPro";
   background-image: url(../assets/images/hero-bio.jpg);
   background-size: cover;
 }
+
 html .hero__title {
-  font: 3.75rem;
+  font-size: 3.75rem;
   line-height: 4.25rem;
-  font-weight: bold 700;
+  font-weight: bold;
   padding: 3rem;
+  padding-left: 8rem;
   color: #ffffff;
 }
+
 html .bio {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
   padding: 2.25rem;
 }
-html .text--header {
-  font: 2.25rem;
+
+html .bio__text__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+html .bio__text--header {
+  font-size: 2.25rem;
   line-height: 2.75rem;
   font-weight: 700;
   padding: 2.25rem;
   padding-top: 3rem;
+  padding-bottom: 2.25rem;
 }
-html .text--quote {
-  font: 1.5rem;
+
+html .bio__text--quote {
+  font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 600;
-  padding: 2.25rem;
 }
-html .text--quote2 {
-  font: 0.875rem;
+
+html .bio__text--quote2 {
+  font-size: 0.875rem;
   line-height: 1.375rem;
   font-weight: 400;
-  padding: 2.25rem;
+  padding-bottom: 2.25rem;
+  font-weight: bold;
 }
-html .text--sub-title {
-  font: 1.5rem;
+
+html .bio__text--sub-title {
+  font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 600;
-  padding: 2.25rem;
-  padding-top: 3rem;
+  font-weight: bold;
+  font-size: 1.5rem;
 }
-html .text--about {
-  font: 0.875rem;
+
+html .bio__text--about {
+  font-size: 0.875rem;
   line-height: 1.375rem;
   font-weight: 400;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  padding: 2.25rem;
+  padding: 10px;
 }
-html .images-wrapper {
-  background-color: #000000;
+
+html .images_wrapper {
+  padding: 100px;
+}
+
+html .images_wrapper h2 {
+  font-size: 2rem;
+  margin-top: 0;
+}
+
+html .images_wrapper .gallery img {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
-  align-content: space-evenly;
-}
-html .images-wrapper .gallery {
-  width: 33%;
-}
-html .images-wrapper .galleryimg {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
-  align-content: space-evenly;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-line-pack: space-evenly;
+      align-content: space-evenly;
   width: 18.75rem;
   padding: 2.25rem;
+  width: 330px;
+  padding: 10px;
 }
+
 html .gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
-  align-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-line-pack: center;
+      align-content: center;
   padding: 2.25rem;
 }
+
 html .gallery .information {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  font: 2.25rem;
+  font-size: 2.25rem;
   line-height: 2.75rem;
   font-weight: 700;
   max-width: 1280px;
   padding: 2.25rem;
   padding-top: 3rem;
 }
+
 @media (min-width: 768px) {
   html .gallery {
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
+
 html .social {
-  display: flex;
+  padding: 100px;
+  padding-left: 146px;
+  padding-right: 146px;
+  padding-top: 0;
 }
+
 html .social__header {
-  font: 2.25rem;
+  font-size: 2.25rem;
   line-height: 2.75rem;
   font-weight: 700;
+  margin-top: 0;
 }
+
 html .social__divider {
   stroke-width: 0.0625rem;
-  fill: #E1E1E1;
+  fill: #e1e1e1;
 }
+
 html .social__form {
   padding: 2.25rem;
-  color: #AFAFAF;
+  width: 500px;
+  margin: 0 auto;
+  color: #afafaf;
 }
+
+html .social__form--avatar {
+  position: relative;
+}
+
+html .social__form--avatar::before {
+  position: absolute;
+  left: -70px;
+  content: "";
+  display: inline-block;
+  background-image: url(../assets/images/Mohan-muruge.jpg);
+  background-size: cover;
+  width: 50px;
+  border-radius: 50%;
+  height: 50px;
+  top: 25%;
+}
+
 html .social__form--section {
-  font: 0.875rem;
+  font-size: 0.875rem;
   line-height: 1.375rem;
   font-weight: 400;
-  color: #AFAFAF;
+  color: #afafaf;
+  margin-bottom: 2px;
 }
+
 html .social__form--input {
-  font: 0.875rem;
+  font-size: 0.875rem;
   line-height: 1.375rem;
   font-weight: 400;
-  outline: #E1E1E1;
+  outline: #e1e1e1;
+  border: 1px solid #e1e1e1;
+  width: 500px;
+  border-radius: 4px;
+  background-color: #e1e1e1;
+  padding: 16px;
 }
-html .social__button {
+
+html .social__form__button {
   background-color: #323232;
   color: #ffffff;
   height: 2.5rem;
@@ -200,7 +309,8 @@ html .social__button {
   padding-right: 2rem;
   border-radius: 0.25rem;
 }
-html .social__button:hover {
+
+html .social__form__button:hover {
   background-color: #323232;
   color: #ffffff;
   height: 2.5rem;
@@ -209,56 +319,126 @@ html .social__button:hover {
   padding-right: 2rem;
   border-radius: 0.25rem;
 }
+
 html .social__comments {
   color: #323232;
+  width: 572px;
+  margin: 0 auto;
 }
+
+html .social__comments--comment {
+  position: relative;
+}
+
+html .social__comments--comment::before {
+  position: absolute;
+  left: -70px;
+  content: "";
+  display: inline-block;
+  background-color: #e1e1e1;
+  width: 50px;
+  border-radius: 50%;
+  height: 50px;
+  top: 16px;
+}
+
+html .social__comments--row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+html .social__comments--row p {
+  margin-bottom: 0;
+}
+
 html .social__comments--name {
   font-weight: bold;
 }
+
 html .social__comments--date {
-  color: #AFAFAF;
+  color: #afafaf;
 }
+
 html .footer-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   max-width: 1280px;
-  padding: 2.25rem;
+  padding: 0;
   width: 100%;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
+
 html .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   background-color: #323232;
   color: #ffffff;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0 100px;
 }
+
 html .footer__logo {
   padding: 2.25rem;
 }
+
 html .footer__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   width: 100%;
 }
-html .footer__title {
-  font: 2.25rem;
+
+html .footer__row > div {
+  padding-right: 105px;
+}
+
+html .footer-title {
+  font-size: 3rem;
+  font-size: 2.25rem;
   line-height: 2.75rem;
   font-weight: 700;
   padding: 2.25rem;
-  padding-top: 3rem;
+  padding-left: 0;
 }
+
 html .footer__name {
-  font: 0.875rem;
+  font-size: 0.875rem;
   line-height: 1.25rem;
   font-weight: 400;
   font-weight: bold;
-  padding: 2.25rem;
+  line-height: 1.7;
 }
+
 html .footer__text {
-  font: 0.875rem;
+  font-size: 0.875rem;
   line-height: 1.25rem;
   font-weight: 400;
-  padding: 2.25rem;
+  line-height: 1.7;
 }
+
 html .media {
   margin-right: auto;
-}/*# sourceMappingURL=bio.css.map */
+  padding-left: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+html .media__img {
+  max-width: 30px;
+  padding: 20px;
+}
+/*# sourceMappingURL=bio.css.map */

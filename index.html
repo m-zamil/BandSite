@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aquil Johnston Band Site</title>
+    <link rel="stylesheet" href="styles/global.css">
     <link rel="stylesheet" href="styles/bio.css">
 </head>
 <body>
@@ -29,16 +30,25 @@
 
 <section class="bio">
     <h1 class="bio__text--header">About the Musicians</h1>
-    <Img class="bio__photo" src="./assets/images/band.jpg"></Img>
-    <p class="bio__text--quote">
-    “We push each other to be the best. It’s not uncommon for one of us to say ‘this needs to be better, back to the drawing board’”</p>
-    <p class="bio__text--quote2">
-    - Bryan Teddy, lead vocalist of The Bees Knees</p>
-    <p class="bio_text--sub-title">The Bees Knees</p>
+    <div style="padding: 0 200px">
+        <Img style="height: 510px;
+        width: 100%;
+        display: block;" class="bio__photo" src="./assets/images/band.jpg"></Img>
+        <p class="bio__text--quote">
+        “We push each other to be the best. It’s not uncommon for one of us to say ‘this needs to be better, back to the drawing board’”</p>
+        <p class="bio__text--quote2">
+        - Bryan Teddy, lead vocalist of The Bees Knees</p>
+        <p class="bio__text--sub-title">The Bees Knees</p>
 
-    <p class="bio_text--about">The Bees Knees is a pop rock band originating from San Francisco, California. The band consists of lead vocalist Bryan Teddy, guitarist Mack Tolkens, guitarist Andrew Green, bassist Kent Zulkee and drummer Freddie Fischer. The band achieved its first commercial success as an unsigned act, drawing attention from manager Cam Adams. Having worked with other popular acts (The Elephant In The Room, One Trick Pony, The Cat’s Meow), Adams was confident the band could succeed even further, pushing them to sign with Magenta Records.</p>
+        <div class="bio__text__wrapper">
 
-    <p class="bio_text--about">From there, the band has soared, gaining international recognition and ranking in the top 10 on the Poster Charts. New fans immediately fell in love with the band’s original and organic attitude, solidifying their place as one of the hottest and fastest up and coming acts of this century. Fans affectionately refer to themselves as “The Hive” and are drawn to their candid and authentic performances on stage. Looking forward to touring in the future, The Bees Knees are currently recording their second studio album, looking to be released in late 2021.</p>
+            <p class="bio__text--about">The Bees Knees is a pop rock band originating from San Francisco, California. The band consists of lead vocalist Bryan Teddy, guitarist Mack Tolkens, guitarist Andrew Green, bassist Kent Zulkee and drummer Freddie Fischer. The band achieved its first commercial success as an unsigned act, drawing attention from manager Cam Adams. Having worked with other popular acts (The Elephant In The Room, One Trick Pony, The Cat’s Meow), Adams was confident the band could succeed even further, pushing them to sign with Magenta Records.</p>
+
+            <p class="bio__text--about">From there, the band has soared, gaining international recognition and ranking in the top 10 on the Poster Charts. New fans immediately fell in love with the band’s original and organic attitude, solidifying their place as one of the hottest and fastest up and coming acts of this century. Fans affectionately refer to themselves as “The Hive” and are drawn to their candid and authentic performances on stage. Looking forward to touring in the future, The Bees Knees are currently recording their second studio album, looking to be released in late 2021.</p>
+      
+
+        </div>
+  </div>
 </section>
 
 <!-- Gallery -->
@@ -69,41 +79,59 @@
 
 <!-- Social -->
 
-<div>
+<div class="social">
     <h2 class="social__header">Join the Conversation</h2>
     <form class="social__form">
-        AVITAR
-<p class="social__form--section">NAME</p>
-<input class="social__form--input">Enter your name</input>
+        <!-- <img class="social__form--avatar" src="./assets/images/Mohan-muruge.jpg" alt="Avatar"> -->
+<div class="social__form--avatar">
+    <p class="social__form--section">NAME</p>
+<input class="social__form--input" placeholder="Enter your name"></input>
 
+</div>
 <p class="social__form--section">COMMENT</p>
-<input class="social__form--input">Add a new comment</input>
+<input style="height:60px" class="social__form--input" placeholder="Add a new comment"></input>
+<div style="text-align: right;margin-top: 30px;">
+    <button class="social__form__button">COMMENT</button>
 
-<button class="social__button">COMMENT</button>
+</div>
+
 </form>
 
-<hr class="social__divider"></hr>
 
 <section class="social__comments">
-    AVITAR
-    <p class="social__comments--name">Connor Walton</p>
-    <p class="social__comments--date">02/17/2021</p>
+    <hr class="social__divider"></hr>
 
-This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.
+    <div class="social__comments--comment">
+        <div class="social__comments--row">
+            <p class="social__comments--name">Connor Walton</p>
+        <p class="social__comments--date">02/17/2021</p>
+        </div>
+        <p>This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.
+        </p>
 
+    </div>
+<hr class="social__divider"></hr>
+<div class="social__comments--comment">
+    <div class="social__comments--row">
+        <p class="social__comments--name">Emilie Beach</p>
+    <p class="social__comments--date">01/09/2021</p>
+    </div>
+  <p>  I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.</p>
+
+</div>
 <hr class="social__divider"></hr>
 
-AVITAR
-<p class="social__comments--name">Emilie Beach</p>
-<p class="social__comments--date">01/09/2021</p>
-<p class="social__comments--text">I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.</p>
+<div class="social__comments--comment">
+    <div class="social__comments--row">
+        <p class="social__comments--name">Miles Acosta</p>
+    <p class="social__comments--date">12/20/2020</p>
+    </div>
+    <p>I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.</p>
 
+</div>
 <hr class="social__divider"></hr>
 
-AVITAR
-<p class="social__comments--name">Miles Acosta</p>
-<p class="social__comments--date">12/20/2020</p>
-<p class="social__comments--text"></p>I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.</p>
+
 </section>
 </div>
 
@@ -126,25 +154,23 @@ AVITAR
     </div>
     <div class="footer__row">
     <div>
-        <p class="footer__name">Cam Adams
+        <p class="footer__name">Cam Adams <br>
             The Bees Knees Management</p>
-        <p class="footer__text">503 Broadway Penthouse,</p>
-        <p class="footer__text">New York, NY 10012, USA</p>
+        <p class="footer__text">503 Broadway Penthouse, <br>
+        New York, NY 10012, USA</p>
         <p class="footer__text">info@thebeesknees.com</p>
         </div>
 
         <div>
-        <p class="footer__name">Pearl Gregg
+        <p class="footer__name">Pearl Gregg <br>
             Limitless Artist Group</p>
-        <p class="footer__text">Booking Agent for</p>
-        <p class="footer__text">USA / South America / Japan</p>
+        <p class="footer__text">Booking Agent for <br> USA / South America / Japan</p>
         <p class="footer__text">pearl.gregg@limitlessag.com</p>
         </div>
         <div>
-        <p class="footer__name">Carson Whyte
+        <p class="footer__name">Carson Whyte <br>
             ARCH Entertainment</p>
-        <p class="footer__text">Booking Agent for</p>
-        <p class="footer__text">UK / EU / AU</p>
+        <p class="footer__text">Booking Agent for <br> UK / EU / AU</p>
         <p class="footer__text">cwhyte@archentertainment.com</p>
         </div>
         </div>

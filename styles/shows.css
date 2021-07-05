@@ -2,6 +2,7 @@
   font-family: "Avenir Next";
   src: url(../../assets/fonts/AvenirNextLTPro-Regular.otf);
 }
+
 @font-face {
   font-family: "AvernirNextLTPro";
   src: url("../assets/fonts/AvenirNextLTPro-Regular.otf");
@@ -9,6 +10,7 @@
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: "AvernirNextLTPro";
   src: url("../assets/fonts/AvenirNextLTPro-Bold.otf");
@@ -16,6 +18,7 @@
   font-weight: 700;
   font-style: normal;
 }
+
 @font-face {
   font-family: "AvernirNextLTPro";
   src: url("../assets/fonts/AvenirNextLTPro-Demi.otf");
@@ -23,113 +26,162 @@
   font-weight: 600;
   font-style: normal;
 }
+
+@use "../styles/_partials/partials" as *;
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html {
   font-family: "AvernirNextLTPro";
   color: bandSiteBlack;
 }
+
 html .menu {
   font-family: "AvernirNextLTPro";
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   max-width: 1280px;
   background-color: #323232;
-  color: #E1E1E1;
+  color: #e1e1e1;
   list-style: none;
   margin: auto;
   padding: 2.25rem;
   padding-top: 3rem;
   padding-left: 3rem;
   text-decoration: none;
-  border-bottom: 0.0625rem solid #AFAFAF;
+  border-bottom: 0.0625rem solid #afafaf;
 }
+
 html .menu__logo {
   max-height: 1.25rem;
   max-width: 7.5rem;
   margin-right: auto;
 }
+
 @media (min-width: 768px) {
   html .menu__logo {
     color: #000000;
   }
 }
+
 html .menu__title {
   text-decoration: none;
-  color: #E1E1E1;
+  color: #e1e1e1;
   margin-right: auto;
   padding: 2.25rem;
 }
+
 html .menu__title--active {
   text-decoration: none;
   padding: 2.25rem;
   color: #ffffff;
   border-bottom: 0.125rem solid #ffffff;
 }
+
 html .menu__title:hover {
   color: #ffffff;
   border-bottom: 0.125rem solid #ffffff;
 }
+
 html .hero-wrapper {
   width: 100%;
   max-width: 1280px;
   background-image: url(../assets/images/hero-shows.jpg);
   background-size: cover;
 }
+
 html .hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex: 1;
-  flex-wrap: wrap;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   height: 600px;
   background-position: center center;
   font-family: "AvernirNextLTPro";
   margin: 0 auto;
 }
+
 html .hero__content {
   width: 50%;
 }
+
 html .hero__content--title {
-  flex-direction: column;
-  align-items: center;
-  font: 3.75rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 3.75rem;
   line-height: 4.25rem;
-  font-weight: bold 700;
+  font-weight: bold;
   padding: 2.25rem;
   color: #ffffff;
   width: 50%;
 }
+
 html .hero__content--subTitle {
-  flex-direction: column;
-  align-items: center;
-  font: 2.25rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2.25rem;
   line-height: 2.75rem;
   font-weight: 700;
   padding: 2.25rem;
   color: #ffffff;
 }
+
 html .hero__music {
-  flex-basis: 50%;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
 }
+
 html .shows {
   width: 100%;
 }
+
 html .shows__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   width: 100%;
-  border-bottom: 0.0625rem solid #E1E1E1;
+  border-bottom: 0.0625rem solid #e1e1e1;
 }
+
 html .shows__section {
-  font: 0.875rem;
+  font-size: 0.875rem;
   line-height: 1.375rem;
   font-weight: 400;
-  color: #AFAFAF;
+  color: #afafaf;
   width: 25%;
 }
+
 html .shows__button {
   background-color: #323232;
   color: #ffffff;
@@ -139,50 +191,72 @@ html .shows__button {
   padding-right: 2rem;
   border-radius: 0.25rem;
 }
+
 html .shows__text {
   width: 25%;
 }
+
 html .footer-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   max-width: 1280px;
   padding: 2.25rem;
   width: 100%;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
+
 html .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   background-color: #323232;
   color: #ffffff;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
+
 html .footer__logo {
   padding: 2.25rem;
 }
+
 html .footer__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   width: 100%;
 }
+
 html .footer__title {
-  font: 2.25rem;
+  font-size: 2.25rem;
   line-height: 2.75rem;
   font-weight: 700;
   padding: 2.25rem;
   padding-top: 3rem;
 }
+
 html .footer__name {
-  font: 0.875rem;
+  font-size: 0.875rem;
   line-height: 1.25rem;
   font-weight: 400;
   font-weight: bold;
   padding: 2.25rem;
 }
+
 html .footer__text {
-  font: 0.875rem;
+  font-size: 0.875rem;
   line-height: 1.25rem;
   font-weight: 400;
   padding: 2.25rem;
 }
+
 html .media {
   margin-right: auto;
-}/*# sourceMappingURL=shows.css.map */
+}
+/*# sourceMappingURL=shows.css.map */
